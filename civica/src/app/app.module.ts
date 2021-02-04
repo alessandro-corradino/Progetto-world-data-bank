@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { RelazioneComponent } from './relazione/relazione.component';
 import { GraficoComponent } from './grafico/grafico.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RelazioneComponent,
     GraficoComponent,
+    HomeComponent,
 
   ],
   imports: [

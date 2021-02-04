@@ -4,9 +4,9 @@ import { GraficoComponent } from './grafico/grafico.component';
 import { RelazioneComponent } from './relazione/relazione.component';
 
 const routes: Routes = [
-  { path: 'search', component: RelazioneComponent },
-  { path: 'items/:id', component: GraficoComponent },
-  { path: '',   redirectTo: '/search', pathMatch: 'full' }
+  { path: 'relazione', component: RelazioneComponent },
+  { path: 'grafico', component: GraficoComponent },
+  { path: '',   redirectTo: '/relazione', pathMatch: 'full' }
 ];
 
 @NgModule({

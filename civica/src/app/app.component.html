@@ -14,33 +14,30 @@
 </head>
 
 <body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <ul class="navbar-nav">
+    <li class="nav-item ">
+      <a class="nav-link" href="#">Express HTML</a>
+    </li>
+    <li class="nav-item active">
+      <a class="nav-link" href="/rel1.html">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/about">About</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/sitemap">Sitemap</a>
+    </li>
+  </ul>
+</nav>
 
-	<div class="container">
-		<form class="jumbotron">
-			<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
-				<!-- Brand/logo -->
-				<a class="navbar-brand " href="">EXPRESS HTML</a>
-				<!-- Links -->
-				<ul class="navbar-nav">
-					<li class="nav-item ">
-						<a class="nav-link" (click)="load10Movies()">Relazione progetto</a>
-					</li>
-					<li class="nav-item ">
-						<a class="nav-link" (click)="loadHorror()">Dati utilizzati</a>
-					</li>
-				</ul>
-			</nav>
-			<br>
-
-
-        </form>
-  </div>
-  <app-relazione> </app-relazione>
-
-
-<app-grafico> </app-grafico>
+<h1>Vuoi sapere chi l'ha fatto?</h1>
+<h6>Dai retta a un cretino, meglio di no.</h6>
 
 </body>
+</html>
 
 
+<router-outlet></router-outlet>
 
+<!--<app-grafici> </app-grafici>-->

@@ -10,7 +10,7 @@ var indexRouter = require('./routes/index');
 var citiesRouter= require('./routes/cities');
 
 var app = express();
-app.use(cors());
+app.use(new cors());
 
 app.use(logger('dev'));
 app.use(express.json());

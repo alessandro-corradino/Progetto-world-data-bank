@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class ApiService {
   constructor(private http: HttpClient) { }
 
-  baseUrl = `https://3000-gold-panda-ioy09ww2.ws-eu03.gitpod.io`;
+  baseUrl = `https://3000-fuchsia-gayal-07ln42gw.ws-eu03.gitpod.io`;
 
   getCities() {
     const url = `${this.baseUrl}/cities`;
@@ -16,7 +16,7 @@ export class ApiService {
     return obs;
   }
 
-  getSust1(name: string) {
+  getSust1() {
     const url = `${this.baseUrl}/cities/sust1`;
     let obs = this.http.get(url);
     console.log(url);

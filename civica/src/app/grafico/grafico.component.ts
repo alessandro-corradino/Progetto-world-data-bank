@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-grafico',
@@ -6,18 +7,34 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./grafico.component.css']
 })
 export class GraficoComponent implements OnInit {
-
-  constructor() { }
-  type = 'ComboChart';
-  myData = [
-    ['London', 8136000],
-    ['New York', 8538000],
-    ['Paris', 2244000],
-    ['Berlin', 3470000],
-    ['Kairo', 19500000],
-  ];
+  chartDataArray = new Array<ChartData>();
+  constructor(public http:HttpClient) {
+     http.get('https://3000-tomato-eagle-u2bfo342.ws-eu03.gitpod.io/cities').subscribe(this.getData);
+  }
 
   ngOnInit(): void {
   }
 
+getData = (data) => {
+    console.log(data);
+    //data = fakeData.data;
+    for (var i in data) {
+      let cd = new ChartData(data[i]['GeoAreaName '], "LineChart", data[i], data[i]['GeoAreaName'])
+      this.chartDataArray.push(cd);
+    }
+  }
+}
+export class ChartData {
+  public data = [];
+  constructor(public title, public type, json_data, public columnNames) {
+    for (var i in json_data) {
+      const parsedX = parseInt(i);
+      const parsedY = parseFloat(json_data[i])
+      if (!isNaN(parsedX) && !isNaN(parsedY)) {
+        this.data.push([parsedX, parsedY]);
+      }
+    }
+    console.log(this.data);
+
+  }
 }
